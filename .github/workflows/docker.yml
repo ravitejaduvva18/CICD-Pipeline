@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4  # Updated version
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4  # Updated version
         with:
           python-version: '3.9'
 
@@ -41,7 +41,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4  # Updated version
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
@@ -62,4 +62,3 @@ jobs:
           push: true
           tags: |
             ghcr.io/${{ github.repository }}/my-image:latest
-          platforms: linux/amd64,linux/arm64
